@@ -18,7 +18,7 @@
                     {{ end }}
                 {{ end }}
             >
-                <div class="post-title">
+                <div class="post-title" v-pre>
                     {{ .Title }}
                     {{ if .Params.description }}
                     <div class="post-subtitle">
@@ -62,7 +62,7 @@
             </div>
             
             <div class="post-body-wrapper">
-                <div class="post-body">
+                <div class="post-body" v-pre>
                     {{.Content}}
                     {{ if not .Lastmod.IsZero }}
                     <HR width="100%" id="EOF">
