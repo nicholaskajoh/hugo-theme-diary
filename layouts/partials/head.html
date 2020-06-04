@@ -11,8 +11,8 @@
 <meta name="theme-color" content="#ffffff">
 <!-- metadata -->
 
-{{ if .Site.GoogleAnalytics }}
-{{ template "_internal/google_analytics.html" . }}
+{{ if and (.Site.GoogleAnalytics) (eq .Site.IsServer false) }}
+{{ template "_internal/google_analytics_async.html" . }}
 {{ end }}
 
 <script src="{{"/vendor/js/jquery.min.js" | relURL}}" ></script>
